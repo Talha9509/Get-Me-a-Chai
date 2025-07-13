@@ -127,7 +127,7 @@ const PaymentPage = ({ username }) => {
 
             <div className="info flex justify-center items-center my-26 mb-32 flex-col gap-2">
                 <div className='font-bold text-lg'>{/* @{params.username} */}@{username}</div>
-                <div className='text-slate-300'>Let's help {username} get a chai!</div>
+                <div className='text-slate-300'>Let&apos;s help {username} get a chai!</div>
                 <div className='text-slate-300'>
                     {payemnts.length} Payments Received
                 </div>
@@ -145,7 +145,7 @@ const PaymentPage = ({ username }) => {
                                 return <li key={i} className='my-2 flex gap-2 items-center'>
                                     <img width={33} src="avatar.gif" alt="user avator" />
                                     <span>
-                                        {p.name} donated <span className='font-bold'>₹{p.amount}</span> with a message "{p.message}";
+                                        {p.name} donated <span className='font-bold'>₹{p.amount}</span> with a message &ldquo;{p.message}&rdquo;;
                                     </span>
                                 </li>
                             })}

@@ -1,12 +1,10 @@
 "use client"
-import React from 'react'
+import React,{useEffect} from 'react'
 import PaymentPage from '@/components/PaymentPage'
 import { useRouter } from 'next/navigation';
 import {useSession} from 'next-auth/react'
-import {useEffect} from 'react'
 
-const username = ({ params }) => {
-   const unwrappedParams = React.use(params);
+const Username = ({ params }) => {
    const router = useRouter()
   const { data: session,status } = useSession()
 
@@ -16,15 +14,12 @@ const username = ({ params }) => {
     }
    },[status,router])
   
-  return (
-    <>
-      <PaymentPage username={unwrappedParams.username}/>
-    </>
-  )
+  return <PaymentPage username={params.username}/>
+  
 }
 
 
-export default username
+export default Username
 
 
  
